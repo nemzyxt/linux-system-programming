@@ -1,3 +1,5 @@
+// using return statements - Good practice
+
 #include <stdio.h>
 
 int func1(void);
