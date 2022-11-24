@@ -44,6 +44,6 @@ void printhelp(char progname[]) {
     printf("-s sums all the integers\n"
            "-m multiplies all the integers\n"
            "This program takes any number of integers and"
-           "either sums or multiplies them\n"
+           " either sums or multiplies them\n"
            "eg. %s -m 5 4 3 2 1\n", progname);
 }
