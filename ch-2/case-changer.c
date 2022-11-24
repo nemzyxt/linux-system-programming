@@ -10,18 +10,19 @@ int main(void) {
         for(i=0; i<=sizeof(c); i++) {
             if((c[i]>=65) && (c[i]<=90)) {
                 newcase[i] = c[i] + 32;
-            } 
+            }
 
             if((c[i]>=97) && c[i]<=122) {
                 newcase[i] = c[i] - 32;
             }
         }
+
+        printf("%s\n", newcase);
+
+        memset(c, 0, sizeof(c));
+        memset(newcase, 0, sizeof(newcase));
+
     }
-
-    printf("%s\n", newcase);
-
-    memset(c, 0, sizeof(c));
-    memset(newcase, 0, sizeof(newcase));
 
     return 0;
 }
