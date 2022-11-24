@@ -18,7 +18,7 @@ int main(void) {
         }
     }
 
-    printf("%s", newcase);
+    printf("%s\n", newcase);
 
     memset(c, 0, sizeof(c));
     memset(newcase, 0, sizeof(newcase));
