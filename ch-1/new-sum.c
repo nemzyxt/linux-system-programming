@@ -15,22 +15,24 @@ int main(int argc, char* argv[]) {
     }
 
     while((opt = getopt(argc, argv, "smh")) != -1) {
-        case 's':
-            result = 0;
-            for(i=2; i<argc; i++) {
-                result += atoi(argv[i]);
-            }
-        case 'm':
-            result = 1;
-            for(i=2; i<argc; i++) {
-                result *= atoi(argv[i]);
-            }
-        case 'h':
-            printhelp(argv[0]);
-            return 0;
-        default:
-            printhelp(argv[0]);
-            return 1;
+        switch(opt) {
+            case 's':
+                result = 0;
+                for(i=2; i<argc; i++) {
+                    result += atoi(argv[i]);
+                }
+            case 'm':
+                result = 1;
+                for(i=2; i<argc; i++) {
+                    result *= atoi(argv[i]);
+                }
+            case 'h':
+                printhelp(argv[0]);
+                return 0;
+            default:
+                printhelp(argv[0]);
+                return 1;
+        }
     }
 
     printf("The result is : %d", result);
