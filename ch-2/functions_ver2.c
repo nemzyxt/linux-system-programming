@@ -1,3 +1,5 @@
+// using exit() - Not good practice
+
 #include <stdio.h>
 #include <stdlib.h>
 
