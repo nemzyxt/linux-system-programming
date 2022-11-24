@@ -5,6 +5,7 @@
 int main(void) {
     printf("A regular message on stdout\n");
     fprintf(stdout, "Also a regular message on stdout\n");
+    fprintf(stderr, "An error message printed to stderr\n");
 
     // using file descriptors,
     // which requires the _POSIX_C_SOURCE 200809L
