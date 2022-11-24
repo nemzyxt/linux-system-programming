@@ -7,7 +7,7 @@ int main(void) {
     int i;
 
     while(fgets(c, sizeof(c), stdin) != NULL) {
-        for(i=0; i<sizeof(c); i++) {
+        for(i=0; i<=sizeof(c); i++) {
             if((c[i]>=65) && (c[i]<=90)) {
                 newcase[i] = c[i] + 32;
             } 
