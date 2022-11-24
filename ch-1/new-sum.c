@@ -21,11 +21,13 @@ int main(int argc, char* argv[]) {
                 for(i=2; i<argc; i++) {
                     result += atoi(argv[i]);
                 }
+                break;
             case 'm':
                 result = 1;
                 for(i=2; i<argc; i++) {
                     result *= atoi(argv[i]);
                 }
+                break;
             case 'h':
                 printhelp(argv[0]);
                 return 0;
