@@ -22,4 +22,6 @@ int main(void) {
 
     memset(c, 0, sizeof(c));
     memset(newcase, 0, sizeof(newcase));
+
+    return 0;
 }
