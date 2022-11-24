@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    printf("The result is : %d", result);
+    printf("The result is : %d\n", result);
     return 0;
 }
 
