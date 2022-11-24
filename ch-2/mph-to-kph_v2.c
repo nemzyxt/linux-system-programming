@@ -29,7 +29,14 @@ int main(int argc, char* argv[]) {
 
     while(fgets(mph, sizeof(mph), stdin) != NULL) {
         if(strspn(mph, "0123456789.-\n") == strlen(mph)) {
-            
+            fprintf(stdout, "%.1f\n", (atof(mph))*1.60934);
+        } else {
+            fprintf(stderr, "[!] Encountered a non-numeric value\n");
+            if(cont == 1) {
+                continue;
+            } else {
+                return 1;
+            }
         }
     }
 
