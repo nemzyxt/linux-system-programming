@@ -42,3 +42,10 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+void printHelp(FILE *stream, char progname[]) {
+    fprintf(stream, "%s [-c] [-h]\n", progname);
+    fprintf(stream, "-h Prints this help menu\n");
+    fprintf(stream, "-c Continues even after encountering "
+                    "a non-numeric value in the input\n");
+}
