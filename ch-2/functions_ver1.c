@@ -1,4 +1,4 @@
-// using return statements - Good practice
+// using return statements - Good
 
 #include <stdio.h>
 
