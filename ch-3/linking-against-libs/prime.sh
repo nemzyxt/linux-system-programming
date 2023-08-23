@@ -7,7 +7,10 @@ gcc -Wall -Wextra -pedantic -fPIC -c prime.c # output : prime.o
 gcc -shared -Wl,-soname,libprime.so -o libprime.so prime.o # output : libprime.so
 
 # compile is-it-prime.c
-gcc -L${PWD} -lprime is-it-prime.c -o is-it-prime
+gcc -L${PWD} is-it-prime.c -o is-it-prime -lprime
 
 # set LD_LIBRARY_PATH env-var to out current path
 export LD_LIBRARY_PATH=${PWD}:${LD_LIBRARY_PATH}
+
+# now run the program
+./is-it-prime
