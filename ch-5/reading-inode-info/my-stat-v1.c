@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    if(stat(argv[1], &stat) == -1) {
+    if(stat(argv[1], &filestat) == -1) {
         fprintf(stderr, "Can't read file %s : %s\n", argv[1], strerror(errno));
         return errno;
     }
