@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <pwd.h>
+#include <grp.h>
 
 int main(int argc, char *argv[]) {
     struct stat filestat;
@@ -33,9 +35,8 @@ int main(int argc, char *argv[]) {
     printf("Inode : %lu\n", filestat.st_ino);
     printf("Size : %zd\n", filestat.st_size);
     printf("Links : %lu\n", filestat.st_nlink);
-    //TODO: Fix bugs
     printf("Owner : %d (%s)\n", filestat.st_uid, user_info->pw_name);
-    printf("Group : %d (%s)\n", filestat.st_gid, group_info->gw_name);
+    printf("Group : %d (%s)\n", filestat.st_gid, group_info->gr_name);
     printf("Filemode : %o\n", filestat.st_mode);
 
     return 0;
