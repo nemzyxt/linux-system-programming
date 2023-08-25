@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     }
 
     while((fp = fopen(argv[1], "r")) == NULL) {
-        perror("Can't open file for reading");
+        perror("Can't open file for reading\n");
         return 1;
     }
 
